@@ -1,0 +1,137 @@
+
+.admin-login-page {
+  min-height: 75vh;
+  padding: 60px 20px;
+  display: grid;
+  place-items: center;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+}
+
+.admin-login-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+}
+
+.admin-login-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-lock-icon {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.admin-login-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.admin-login-heading p {
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.admin-login-card form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.admin-login-card input {
+  width: 100%;
+  padding: 14px;
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  outline: none;
+  font: inherit;
+}
+
+.admin-login-card input:focus {
+  border-color: var(--primary);
+}
+
+.admin-password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-password-field input {
+  padding-right: 45px;
+}
+
+.admin-password-field button {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-login-error {
+  color: #d94c4c;
+  font-size: 13px;
+  margin: 0;
+}
+
+.admin-login-footer {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 11px;
+  margin: 25px 0 0;
+}
+
+@media (max-width: 500px) {
+  .admin-login-card {
+    padding: 28px 20px;
+  }
+}

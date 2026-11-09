@@ -1,0 +1,299 @@
+
+.about-page {
+  --about-bg: #f8f6ef;
+  --about-surface: #ffffff;
+  --about-text: #1d2922;
+  --about-muted: #68736b;
+  --about-green: #173d30;
+  --about-accent: #c99461;
+  --about-border: #e5e2d8;
+  background: var(--about-bg);
+  color: var(--about-text);
+}
+
+.about-page.theme-dark {
+  --about-bg: #111a15;
+  --about-surface: #19251e;
+  --about-text: #f5f0e7;
+  --about-muted: #c0c9c0;
+  --about-green: #78927c;
+  --about-accent: #e6b27e;
+  --about-border: #354138;
+}
+
+.about-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.about-hero {
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 65px max(24px, calc((100% - 1160px) / 2));
+}
+
+.about-hero-content {
+  max-width: 540px;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--about-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.about-hero h1 {
+  margin: 0 0 22px;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+  color: var(--about-green);
+}
+
+.about-hero p,
+.about-intro-content p,
+.about-purpose p,
+.about-section-heading p,
+.about-why p,
+.about-cta p {
+  color: var(--about-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px 24px;
+  border-radius: 5px;
+  background: var(--about-green);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.about-primary-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.about-hero-image {
+  height: 440px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.about-intro-image {
+  height: 430px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.about-intro-content h2,
+.about-purpose h2,
+.about-section-heading h2,
+.about-why h2,
+.about-cta h2 {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 3.5vw, 43px);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.about-purpose {
+  padding: 85px 0;
+  background: var(--about-surface);
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.purpose-card {
+  padding: 38px;
+  border: 1px solid var(--about-border);
+  border-radius: 8px;
+}
+
+.purpose-icon,
+.value-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--about-bg);
+  color: var(--about-green);
+}
+
+.purpose-card h2 {
+  font-size: 29px;
+}
+
+.about-values {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-section-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.about-value-card {
+  padding: 32px;
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 8px;
+}
+
+.about-value-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+}
+
+.about-value-card p {
+  margin: 0;
+  color: var(--about-muted);
+  line-height: 1.8;
+}
+
+.about-why {
+  padding: 90px 0;
+  background: var(--about-surface);
+}
+
+.about-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.about-why-grid > div:first-child > p {
+  max-width: 480px;
+}
+
+.about-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--about-text);
+  font-size: 16px;
+}
+
+.about-benefit svg {
+  flex-shrink: 0;
+  color: var(--about-green);
+}
+
+.about-cta {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.about-cta p {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    width: min(100% - 36px, 600px);
+  }
+
+  .about-hero,
+  .about-intro,
+  .purpose-grid,
+  .about-values-grid,
+  .about-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    gap: 35px;
+    padding: 55px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 44px;
+  }
+
+  .about-hero-image {
+    height: 300px;
+  }
+
+  .about-intro {
+    gap: 35px;
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  .about-intro-image {
+    height: 300px;
+  }
+
+  .about-purpose,
+  .about-values,
+  .about-why,
+  .about-cta {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .purpose-card,
+  .about-value-card {
+    padding: 25px;
+  }
+
+  .about-why-grid {
+    gap: 35px;
+  }
+}

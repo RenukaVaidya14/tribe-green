@@ -1,0 +1,87 @@
+
+.thankyou-page {
+  min-height: 650px;
+  padding: 80px 20px;
+  display: grid;
+  place-items: center;
+}
+
+.thankyou-card {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  padding: 55px 35px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.success-icon {
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+.thankyou-card h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--text);
+  font-size: 55px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.thankyou-description {
+  color: var(--secondary);
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 0 auto 30px;
+  max-width: 420px;
+}
+
+.enquiry-reference {
+  padding: 18px;
+  background: var(--surface-secondary);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.enquiry-reference span {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.enquiry-reference strong {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.whatsapp-button,
+.back-catalogue-button {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.whatsapp-button {
+  background: var(--primary);
+  color: white;
+}
+
+.back-catalogue-button {
+  margin-top: 13px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+
+@media (max-width: 500px) {
+  .thankyou-card {
+    padding: 40px 20px;
+  }
+}

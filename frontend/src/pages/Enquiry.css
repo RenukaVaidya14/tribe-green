@@ -1,0 +1,145 @@
+
+.enquiry-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px 24px 90px;
+}
+
+.enquiry-heading {
+  text-align: center;
+  margin: 35px auto 45px;
+  max-width: 650px;
+}
+
+.enquiry-heading h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--text);
+  font-size: clamp(35px, 5vw, 52px);
+  font-weight: 500;
+  margin: 18px 0;
+}
+
+.enquiry-heading p {
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
+.enquiry-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 38px;
+}
+
+.enquiry-form h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 24px;
+  margin: 0 0 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.form-grid label,
+.form-section > label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-section textarea {
+  width: 100%;
+  padding: 14px;
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  outline: none;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-section textarea:focus {
+  border-color: var(--primary);
+}
+
+.form-section {
+  margin-top: 38px;
+}
+
+.customisation-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.checkbox-label input {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+}
+
+.form-section textarea {
+  resize: vertical;
+  margin-top: 10px;
+}
+
+.form-error {
+  color: #d94c4c;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.submit-enquiry-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 30px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.submit-enquiry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--secondary);
+  margin-top: 17px;
+}
+
+@media (max-width: 650px) {
+  .enquiry-form {
+    padding: 22px 17px;
+  }
+
+  .form-grid,
+  .customisation-options {
+    grid-template-columns: 1fr;
+  }
+}

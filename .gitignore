@@ -1,0 +1,26 @@
+
+# Node.js
+**/node_modules/
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# React
+**/dist/
+
+# Android
+**/.gradle/
+**/build/
+**/local.properties
+*.jks
+*.keystore
+
+# IDE
+**/.idea/
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db

@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-background: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #efede5;
+
+  --color-primary: #173d30;
+  --color-primary-hover: #245642;
+
+  --color-text: #292d29;
+  --color-text-secondary: #747970;
+
+  --color-border: #e5e1d7;
+  --color-accent: #a58b65;
+
+  --shadow-soft: 0 12px 35px rgba(30, 45, 35, 0.07);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #141a17;
+  --color-surface: #1c241f;
+  --color-surface-secondary: #252c27;
+
+  --color-primary: #527a61;
+  --color-primary-hover: #679477;
+
+  --color-text: #f0ede5;
+  --color-text-secondary: #a9b3a9;
+
+  --color-border: #343d36;
+  --color-accent: #b79b72;
+
+  --shadow-soft: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+}
+
+
+/* Global dropdown styling */
+select {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  color-scheme: light;
+}
+
+/* Dropdown options */
+select option {
+  background-color: #ffffff;
+  color: #292d29;
+}
+
+/* Dark theme dropdown */
+[data-theme="dark"] select {
+  background-color: var(--surface);
+  color: var(--text);
+  color-scheme: dark;
+}
+
+[data-theme="dark"] select option {
+  background-color: #1c241f;
+  color: #f0ede5;
+}
+
+/* Focus styling */
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* Disabled dropdown */
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

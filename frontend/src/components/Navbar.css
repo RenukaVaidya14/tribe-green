@@ -1,0 +1,224 @@
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  min-height: 82px;
+  margin: auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand strong {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.navbar-brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 3px;
+  color: var(--secondary);
+}
+
+/* =====================================
+   NAVIGATION LINKS
+===================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* =====================================
+   NAVBAR ACTIONS
+===================================== */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Theme Toggle */
+
+.theme-toggle,
+.mobile-menu-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* =====================================
+   EXPLORE GIFTS BUTTON
+===================================== */
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 21px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Light Theme */
+
+.nav-cta-light {
+  background-color: #173D30;
+  color: #FFFFFF !important;
+  border: 1px solid #173D30;
+}
+
+.nav-cta-light:hover {
+  background-color: #245642;
+  border-color: #245642;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* Dark Theme */
+
+.nav-cta-dark {
+  background-color: #527A61;
+  color: #FFFFFF !important;
+  border: 1px solid #527A61;
+}
+
+.nav-cta-dark:hover {
+  background-color: #679477;
+  border-color: #679477;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   MOBILE MENU BUTTON
+===================================== */
+
+.mobile-menu-button {
+  display: none;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 18px;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+
+    padding: 25px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .nav-links a,
+  .nav-cta,
+  .theme-toggle {
+    transition: none;
+  }
+}
