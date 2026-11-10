@@ -1,14 +1,16 @@
 
 import axios from "axios";
 
+const BACKEND_URL = "https://tribe-green-nq2r.onrender.com";
+
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: `${BACKEND_URL}/api`,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-export const IMAGE_BASE_URL = "http://localhost:5000";
+export const IMAGE_BASE_URL = BACKEND_URL;
 
 export const getImageUrl = (imagePath) => {
   if (!imagePath) return "";
@@ -20,5 +22,4 @@ export const getImageUrl = (imagePath) => {
   return `${IMAGE_BASE_URL}${imagePath.startsWith("/") ? "" : "/"}${imagePath}`;
 };
 
-// Important: default export required by productService.js
 export default api;
