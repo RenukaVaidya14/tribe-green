@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const BACKEND_URL = "https://tribe-green-nq2r.onrender.com";
+const BACKEND_URL = "https://tribe-green-api.onrender.com";
 
 const api = axios.create({
   baseURL: `${BACKEND_URL}/api`,
