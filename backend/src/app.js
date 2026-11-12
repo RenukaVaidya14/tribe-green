@@ -22,17 +22,18 @@ app.use(
 );
 
 // CORS configuration
+// CORS configuration
 app.use(
-    cors({
-       
+  cors({
     origin: [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://tribe-green-kohl.vercel.app"
-],
-        methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-    })
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://tribe-green-kohl.vercel.app",
+      "https://tribe-green-1bsf.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
 );
 
 // Body parsing middleware
